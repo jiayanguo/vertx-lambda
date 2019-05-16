@@ -37,7 +37,7 @@ In your API gateway configuration, go to Binary Support and add a binary media t
 
 Regarding vertx wrapper, I copied the code from :https://github.com/noseka1/vertx-aws-lambda
 
-Development note
+== Development note:
 
 This is a aws lambda of java vertx sample code, which includes several other vertx sample code as well.
 
