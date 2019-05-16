@@ -1,0 +1,35 @@
+service: vertx-service
+
+provider:
+  name: aws
+  runtime: java8
+  memorySize: 1536
+  timeout: 60
+
+package:
+  artifact: 'target/VertxLambda-1.0.0-fat.jar'
+
+functions:
+  users:
+    handler: com.charter.metadata.vertx.test.lambda.VertxHandler
+    events:
+      - http:
+          path: users
+          method: get
+          cors: true
+      - http:
+          path: users/{id}
+          method: get
+          cors: true
+      - http:
+          path: users
+          method: post
+          cors: true
+      - http:
+          path: users/{id}
+          method: put
+          cors: true
+      - http:
+          path: users/{id}
+          method: delete
+          cors: true
